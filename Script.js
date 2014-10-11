@@ -1,7 +1,7 @@
 javascript:
 var x = 0;
-document.onkeydown = flvsSafeWebScript;
-function flvsSafeWebScript(eKey){
+document.onkeydown = SafeWebScript;
+function SafeWebScript(eKey){
   if(eKey.keyCode == 49){
     window.location.href = 'http://www.flvs.com';
   }else if(eKey.keyCode == 50){
