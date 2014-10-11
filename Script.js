@@ -1,15 +1,17 @@
 javascript:
 var x = 0;
-document.onkeydown = flvsScript;
-function flvsScript(e){
-  if(e.keyCode == 49){
-    window.location.href = 'http://www.yahoo.com';
-  }else if(e.keyCode == 50){
-    var css = document.getElementsByTagName('link');
-    css[0].href = "none.css";
-  }else if(e.keyCode == 51){
+document.onkeydown = flvsSafeWebScript;
+function flvsSafeWebScript(eKey){
+  if(eKey.keyCode == 49){
+    window.location.href = 'http://www.flvs.com';
+  }else if(eKey.keyCode == 50){
+    var cssDisablerScript = document.getElementsByTagName('link');
+    cssDisablerScript[0].href = "none.css";
+  }else if(eKey.keyCode == 51){
     window.open('http://www.google.com');
-  }else if(e.keyCode == 52){
+  }else if(eKey.keyCode == 52){
     window.location.reload(true);
+  }else if(eKey.keyCode == 53 && window.location.protocol != 'https:'){
+    window.location.protocol = 'https:';
   }
 }
