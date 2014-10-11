@@ -20,5 +20,5 @@ you may ask why not simply press the x icon
 well pressing my bookmark acts like the x button only it postpones the action
 you will quickly be able to exit the page with the [1] when you need to.
 
-if you want the bookmark to open up a certain thing chane http://www.google.com to what you want
+if you want the bookmark to open up a certain thing chane http://www.yahoo.com or the http://www.google.com to what you want
 you must have the http protocal on the link for it to send you to your page.
