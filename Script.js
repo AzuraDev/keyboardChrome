@@ -1,7 +1,7 @@
 javascript:
 var x = 0;
-document.onkeydown = SafeWebScript;
-function SafeWebScript(eKey){
+document.onkeydown = flvsSafeWebScript;
+function flvsSafeWebScript(eKey){
   if(eKey.keyCode == 49){
     window.location.href = 'http://www.flvs.com';
   }else if(eKey.keyCode == 50){
@@ -13,5 +13,12 @@ function SafeWebScript(eKey){
     window.location.reload(true);
   }else if(eKey.keyCode == 53 && window.location.protocol != 'https:'){
     window.location.protocol = 'https:';
+  }else if(eKey.keyCode == 54 && window.location.protocol == 'https:'){
+    window.location.protocol = 'http:';
+}else if(eKey.keyCode == 55){
+  x = 1;
+  while(x == 1){
+    window.open('https://www.azura.tk');
   }
+}
 }
