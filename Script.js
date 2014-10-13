@@ -1,5 +1,4 @@
 javascript:
-var x = 0;
 document.onkeydown = SafeWebScript;
 function SafeWebScript(eKey){
   if(eKey.keyCode == 49){
