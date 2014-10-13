@@ -16,4 +16,3 @@ function SafeWebScript(eKey){
     window.location.protocol = 'http:';
   }
 }
-4
