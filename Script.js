@@ -1,13 +1,4 @@
 javascript:
-var x = 0;
-var y = 0;
-var pgnow = 0;
-var pglist = 9;
-var link1 = 'http://www.flvs.net';
-var link2 = 'http://www.azura.tk';
-var link3 = 'http://www.gmail.com';
-var link4 = 'http://www.yahoo.com';
-var link5 = 'http://www.google.com';
 var pg1 = 'Hello, Welcome To The Tutorial, press 8 again to continue: ';
 var pg2 = 'Use key [1] to replace your current page with google or your preffered link ';
 var pg3 = 'Use key [2] to wipe css of many different websites ';
@@ -17,17 +8,36 @@ var pg6 = 'use key [5] to enable https encryption on the website your on ';
 var pg7 = 'use key [6] to disable https encryption on the website your on ';
 var pg8 = 'use key [7] to select a randon array of websites to go on ';
 var pg9 = 'use key [8] to access the tutorial ';
-var safeWebArray = new Array();
-safeWebArray[0] = link1;
-safeWebArray[1] = link2;
-safeWebArray[2] = link3;
-safeWebArray[3] = link4;
-var safeWebSelector = Math.floor(Math.random() * safeWebArray.length);
-
+var pg10 = 'use key [10] to change links there are ' + webArray + ' links to change ';
+var pl1 = 'Change Link 1';
+var pl2 = 'Change Link 2';
+var pl3 = 'Change Link 3';
+var pl4 = 'Change Link 4';
+var pl5 = 'Change Link 5';
+var x = 0;
+var y = 0;
+var z = 0;
+var pgnow = 0;
+var pglist = 10;
+var plink1;
+var plink2;
+var plink3;
+var plink4;
+var plink5;
+var webArray;
+var safeWebSelector;
+var safeWebArray;
 document.onkeydown = flvsSafeWebScript;
 function flvsSafeWebScript(eKey){
+  safeWebArray = new Array();
+  safeWebArray[0] = plink1;
+  safeWebArray[1] = plink2;
+  safeWebArray[2] = plink3;
+  safeWebArray[3] = plink4;
+  safeWebSelector = Math.floor(Math.random() * safeWebArray.length);
+  webArray = safeWebArray.length + 1;
   if(eKey.keyCode == 49){
-    window.location.href = link5;
+    window.open(plink5);
   }else if(eKey.keyCode == 50){
     var cssDisablerScript = document.getElementsByTagName('link');
     cssDisablerScript[0].href = "none.css";
@@ -51,7 +61,7 @@ function flvsSafeWebScript(eKey){
     }else if(y == 3){
       alert(pg3 + pgnow + '/' + pglist);
     }else if(y == 4){
-      alert(pg4 + pgnow + '/' +pglist);
+      alert(pg4 + pgnow + '/' + pglist);
     }else if(y == 5){
       alert(pg5 + pgnow + '/' + pglist);
     }else if(y == 6){
@@ -62,6 +72,21 @@ function flvsSafeWebScript(eKey){
       alert(pg8 + pgnow + '/' + pglist);
     }else if(y == 9){
       alert(pg9 + pgnow + '/' + pglist);
+    }else if(y == 10){
+      alert(pg10 + pgnow + '/' + pglist);
+    }
+  }else if(eKey.keyCode == 57){
+    z += 1;
+    if(z == 1){
+      plink1 = prompt(pl1);
+    }else if(z == 2){
+      plink2 = prompt(pl2);
+    }else if(z == 3){
+      plink3 = prompt(pl3);
+    }else if(z == 4){
+      plink4 = prompt(pl4);
+    }else if(z == 5){
+      plink5 = prompt(pl5);
     }
   }
 }
