@@ -14,6 +14,7 @@ var pl2 = 'Change Link 2';
 var pl3 = 'Change Link 3';
 var pl4 = 'Change Link 4';
 var pl5 = 'Change Link 5';
+var pl6 = 'Change Link 6';
 var x = 0;
 var y = 0;
 var z = 0;
@@ -24,6 +25,7 @@ var plink2;
 var plink3;
 var plink4;
 var plink5;
+var plink6;
 var webArray;
 var safeWebSelector;
 var safeWebArray;
@@ -34,10 +36,11 @@ function flvsSafeWebScript(eKey){
   safeWebArray[1] = plink2;
   safeWebArray[2] = plink3;
   safeWebArray[3] = plink4;
+  safeWebArray[4] = plink5;
   safeWebSelector = Math.floor(Math.random() * safeWebArray.length);
   webArray = safeWebArray.length + 1;
   if(eKey.keyCode == 49){
-    window.open(plink5);
+    window.open(plink6);
   }else if(eKey.keyCode == 50){
     var cssDisablerScript = document.getElementsByTagName('link');
     cssDisablerScript[0].href = "none.css";
@@ -87,6 +90,11 @@ function flvsSafeWebScript(eKey){
       plink4 = prompt(pl4);
     }else if(z == 5){
       plink5 = prompt(pl5);
+    }else if(z == 6){
+      plink6 = prompt(pl6);
+    }else if(z > 6){
+      z = 0;
     }
   }
 }
+
