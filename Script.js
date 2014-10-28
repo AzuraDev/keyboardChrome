@@ -77,6 +77,9 @@ function flvsSafeWebScript(eKey){
       alert(pg9 + pgnow + '/' + pglist);
     }else if(y == 10){
       alert(pg10 + pgnow + '/' + pglist);
+    }else if(y >= 11){
+     y = 0;
+     pgnow = 0;
     }
   }else if(eKey.keyCode == 57){
     z += 1;
@@ -97,4 +100,3 @@ function flvsSafeWebScript(eKey){
     }
   }
 }
-
